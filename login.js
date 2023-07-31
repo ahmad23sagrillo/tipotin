@@ -8,6 +8,7 @@ function login() {
       .then((userCredential) => {
         // User is authenticated, handle login success
         document.getElementById("loginPage").style.display = "none";
+        document.getElementById("signUpPage").style.display = "none";
         document.getElementById("mainPage").style.display = "block";
         loadProfile(currentProfileIndex);
       })
