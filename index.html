@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tinder-Like App</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Conditional rendering based on authentication status -->
+        <div id="loginPage">
+            <h1>Login</h1>
+            <div class="login-form">
+                <input type="text" id="username" placeholder="Username">
+                <input type="password" id="password" placeholder="Password">
+                <button onclick="login()">Login</button>
+                <button onclick="showSignUpForm()">Sign Up</button>
+            </div>
+        </div>
+        <div id="signUpPage" style="display: none;">
+            <h1>Sign Up</h1>
+            <div class="login-form">
+                <input type="text" id="newUsername" placeholder="New Username">
+                <input type="password" id="newPassword" placeholder="New Password">
+                <button onclick="signUp()">Create Account</button>
+                <button onclick="showLoginPage()">Back to Login</button>
+            </div>
+        </div>
+        <div id="mainPage" style="display: none;">
+            <!-- Profile creation form -->
+            <div id="profileCreationForm" style="display: none;">
+                <h2>Create Your Profile</h2>
+                <div class="create-profile-form">
+                    <input type="text" id="name" placeholder="Name">
+                    <input type="number" id="age" placeholder="Age">
+                    <textarea id="description" placeholder="Description"></textarea>
+                    <input type="file" id="profileImage" accept="image/*">
+                    <button onclick="createProfile()">Create Profile</button>
+                </div>
+            </div>
+            <!-- Profile card -->
+            <div class="profile-card" id="profileCard">
+                <div class="profile-image"></div>
+                <h2></h2>
+                <p class="profile-age"></p>
+                <p class="profile-description"></p>
+            </div>
+            <div class="buttons">
+                <button onclick="handleDislike()">Dislike</button>
+                <button onclick="handleLike()">Like</button>
+            </div>
+            <div>
+                <button onclick="showProfileCreationForm()">Create Profile</button>
+                <button onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
+    <script src="./firebaseConfig.js"></script>
+    <script src="./login.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
+
+

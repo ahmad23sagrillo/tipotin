@@ -1,0 +1,96 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.login-form, .create-profile-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form input, .create-profile-form input, .create-profile-form textarea {
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.create-profile-form textarea {
+    resize: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin-top: 20px;
+}
+
+.buttons button {
+    width: 100px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+.buttons button:hover {
+    background-color: #f95959;
+}
+
+.profile-card {
+    width: 300px;
+    max-width: 100%;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    margin: 0 auto 10px;
+    background-size: cover;
+    background-position: center;
+}
+
+.profile-card h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.profile-card p {
+    margin: 5px 0;
+}
+
